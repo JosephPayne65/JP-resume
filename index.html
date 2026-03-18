@@ -458,7 +458,6 @@
     text-decoration: none;
     color: var(--ink);
     transition: border-color 0.2s, box-shadow 0.2s;
-    cursor: pointer; /* indicate clickable for email copy */
   }
 
   .contact-card:hover {
@@ -578,6 +577,7 @@
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in touch</a>
       <a href="#experience" class="btn btn-soft">View my experience</a>
+      <a href="/resume.pdf" target="_blank" class="btn btn-soft" download>📄 Resume</a>
     </div>
   </div>
 
@@ -822,7 +822,7 @@
 
 <div class="divider"></div>
 
-<!-- CONTACT (with working copy-to-clipboard email) -->
+<!-- CONTACT with Resume Card -->
 <section id="contact" class="contact-section">
   <div class="contact-wrap">
     <span class="section-eyebrow">Contact</span>
@@ -842,6 +842,21 @@
         <span class="contact-card-arrow" id="copy-feedback">📋</span>
       </div>
 
+      <!-- RESUME CARD - Download PDF -->
+      <a href="/resume.pdf" target="_blank" class="contact-card" download>
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5h-2v5h-1v-5h-2V9h5v.5zm5 5h-1.5l-1.75-2.25V14H12V9h1.5v2.25L15.25 9h1.5l-2.25 3 2.25 3z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Resume (PDF)</div>
+          <div class="contact-card-value">Download my resume →</div>
+        </div>
+        <span class="contact-card-arrow">⬇️</span>
+      </a>
+
+      <!-- GitHub card -->
       <a href="https://github.com/JosephPayne65" target="_blank" class="contact-card">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
@@ -853,6 +868,7 @@
         <span class="contact-card-arrow">&#8599;</span>
       </a>
 
+      <!-- LinkedIn card -->
       <a href="https://www.linkedin.com/in/joseph-payne-4a6a31206" target="_blank" class="contact-card">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -864,6 +880,7 @@
         <span class="contact-card-arrow">&#8599;</span>
       </a>
 
+      <!-- Location row -->
       <div class="location-row">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
         Chicagoland area &nbsp;&middot;&nbsp; Open to Remote and Hybrid
@@ -879,6 +896,7 @@
     <a href="#" onclick="copyEmail(event)">📋 Copy email</a>
     <a href="https://github.com/JosephPayne65" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/joseph-payne-4a6a31206" target="_blank">LinkedIn</a>
+    <a href="/resume.pdf" target="_blank" download>📄 Resume</a>
   </div>
 </footer>
 
@@ -915,3 +933,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+</body>
+</html>
