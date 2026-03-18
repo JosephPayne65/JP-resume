@@ -892,7 +892,7 @@
   </div>
 </footer>
 
-<!-- JavaScript for copy-to-clipboard functionality -->
+<!-- JavaScript -->
 <script>
 // Copy email function
 function copyEmail(event) {
@@ -904,26 +904,6 @@ function copyEmail(event) {
     alert('Press Ctrl+C to copy: josephpayne65@gmail.com');
   });
 }
-
-// Make the email card clickable for copying
-document.addEventListener('DOMContentLoaded', function() {
-  const emailCard = document.getElementById('email-copy-trigger');
-  if (emailCard) {
-    emailCard.addEventListener('click', function(e) {
-      e.preventDefault();
-      navigator.clipboard.writeText('josephpayne65@gmail.com').then(function() {
-        const feedback = document.getElementById('copy-feedback');
-        const originalText = feedback.textContent;
-        feedback.textContent = '✓ Copied!';
-        setTimeout(() => {
-          feedback.textContent = originalText;
-        }, 2000);
-      }).catch(function(err) {
-        alert('Press Ctrl+C to copy: josephpayne65@gmail.com');
-      });
-    });
-  }
-});
 </script>
 </body>
 </html>
